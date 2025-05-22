@@ -10,11 +10,14 @@
 
 class	PhoneBook
 {
+private:
+
 	Contact _contacts[MAX_NUM];
 	int		_num_contacts;
 	int		_index;
 
-	public :
+public :
+
 	PhoneBook();
 	~PhoneBook();
 
