@@ -1,17 +1,15 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-using namespace std;
-
 int	main(void)
 {
 	PhoneBook	phone_book;
-	string		command;
+	std::string		command;
 
 	while (true)
 	{
-		cout << "Please, enter the command : " << endl;
-		getline(cin, command);
+		std::cout << "Please, enter the command : " << std::endl;
+		getline(std::cin, command);
 
 		if (command == "ADD")
 			phone_book.add_contact();
@@ -20,7 +18,7 @@ int	main(void)
 		else if (command == "EXIT")
 			return (0);
 		else
-			cout << "Invalid command. Try again :)" << endl;
+			std::cout << "Invalid command. Try again :)" << std::endl;
 	}
 	return (0);
 }

@@ -1,6 +1,9 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
+INC = Contact.hpp \
+		PhoneBook.hpp
+
 SRC = main.cpp \
 		PhoneBook.cpp \
 		Contact.cpp
@@ -13,7 +16,7 @@ all: $(NAME)
 $(NAME) : $(OBJ) Makefile
 		$(CC) $(OBJ) -o $(NAME)
 
-%.o : %.cpp
+%.o : %.cpp $(INC) Makefile
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
@@ -22,6 +25,6 @@ clean :
 fclean : clean
 		rm -f $(NAME)
 
-re : fclean, all
+re : fclean all
 
 .PHONY : NAME all clean fclean re

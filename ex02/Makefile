@@ -1,18 +1,21 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+INC = Account.hpp
+
+SRC = Account.cpp \
+		tests.cpp
+
 OBJ = ${SRC:.cpp=.o}
 
-NAME = megaphone
-
+NAME = Account
 
 all: $(NAME)
 
 $(NAME) : $(OBJ) Makefile
 		$(CC) $(OBJ) -o $(NAME)
 
-%.o : %.cpp Makefile
+%.o : %.cpp $(INC) Makefile
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
