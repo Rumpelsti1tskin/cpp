@@ -28,6 +28,6 @@ clean :
 fclean : clean
 		rm -f $(NAME)
 
-re = fclean all
+re : fclean all
 
-.PHONY = NAME all clean fclean re
+.PHONY : NAME all clean fclean re

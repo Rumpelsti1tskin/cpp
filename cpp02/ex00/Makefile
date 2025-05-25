@@ -1,18 +1,21 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp
+INC = Fixed.hpp
 
-NAME = brain
+SRC = main.cpp \
+		Fixed.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
+NAME = fixed
+
 all = NAME
 
-$(NAME) : $(OBJ) Makefile
+$(NAME) : $(OBJ) $(INC) Makefile
 		$(CC) $(OBJ) -o $(NAME)
 
-%.cpp : %.o Makefile
+%.o : %.cpp $(INC) Makefile
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
@@ -24,4 +27,3 @@ fclean : clean
 re : fclean all
 
 .PHONY : NAME all clean fclean re
-
