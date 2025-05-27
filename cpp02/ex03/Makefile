@@ -1,10 +1,13 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INC = Fixed.hpp
+INC = Fixed.hpp \
+		Point.hpp
 
 SRC = main.cpp \
-		Fixed.cpp
+		Fixed.cpp \
+		Point.cpp \
+		bsp.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
