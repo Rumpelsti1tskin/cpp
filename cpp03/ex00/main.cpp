@@ -21,14 +21,8 @@ int	main(void)
 	clap_trap_2.beRepaired(5);
 
 	//should be able to attack
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
-	clap_trap_2.attack("Bob");
+	for (int i = 0; i < 8; ++i)
+		clap_trap_2.attack("Bob");
 
 	//should not be able to attack, no energy
 	clap_trap_2.attack("Bob");

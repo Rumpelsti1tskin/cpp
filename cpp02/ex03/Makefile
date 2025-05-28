@@ -13,7 +13,7 @@ OBJ = ${SRC:.cpp=.o}
 
 NAME = fixed
 
-all = NAME
+all: $(NAME)
 
 $(NAME) : $(OBJ) $(INC) Makefile
 		$(CC) $(OBJ) -o $(NAME)

@@ -6,7 +6,6 @@ OBJ = ${SRC:.cpp=.o}
 
 NAME = megaphone
 
-
 all: $(NAME)
 
 $(NAME) : $(OBJ) Makefile

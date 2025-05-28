@@ -7,7 +7,7 @@ NAME = brain
 
 OBJ = ${SRC:.cpp=.o}
 
-all = NAME
+all: $(NAME)
 
 $(NAME) : $(OBJ) Makefile
 		$(CC) $(OBJ) -o $(NAME)

@@ -10,7 +10,7 @@ OBJ = ${SRC:.cpp=.o}
 
 NAME = clap_trap
 
-all = NAME
+all: $(NAME)
 
 $(NAME) : $(OBJ) $(INC) Makefile
 		$(CC) $(OBJ) -o $(NAME)

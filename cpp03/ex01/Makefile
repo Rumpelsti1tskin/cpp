@@ -1,18 +1,20 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INC = Harl.hpp
+INC = ClapTrap.hpp \
+		ScavTrap.hpp
 
 SRC = main.cpp \
-		Harl.cpp
-
-NAME = harlFilter
+		ClapTrap.cpp \
+		ScavTrap.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
+NAME = scav_trap
+
 all: $(NAME)
 
-$(NAME) : $(OBJ) Makefile
+$(NAME) : $(OBJ) $(INC) Makefile
 		$(CC) $(OBJ) -o $(NAME)
 
 %.o : %.cpp $(INC) Makefile
