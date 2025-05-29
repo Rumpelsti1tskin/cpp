@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
@@ -51,6 +52,23 @@ int	main(void)
 	scav_trap.attack("Bob");
 
 	ScavTrap	scav_copy(scav_trap);
+	}
+	{
+	std::cout << std::endl << "Third test start" << std::endl << std::endl;
+	FragTrap	frag_trap("July");
+	ClapTrap	clap_trap("Willy");
+
+	for (int i = 0; i < 50; ++i)
+	{
+		frag_trap.attack("Willy");
+		frag_trap.takeDamage(10);
+		frag_trap.beRepaired(10);
+	}
+	frag_trap.attack("Willy");
+
+	frag_trap.highFivesGuys();
+
+	FragTrap	frag_copy(frag_trap);
 	}
 	return (0);
 }
