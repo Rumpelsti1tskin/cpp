@@ -22,10 +22,10 @@ FragTrap::FragTrap(const std::string &name) : ScavTrap(name)
 	return ;
 }
 
-FragTrap::FragTrap(const FragTrap &other) : ScavTrap(other)
+FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other), ScavTrap(other)
 {
 	*this = other;
-	
+
 	std::cout << "The copy constructor was called for FragTrap : " << this->_name << std::endl;
 	
 	return ;

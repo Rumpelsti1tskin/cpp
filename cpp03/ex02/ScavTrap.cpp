@@ -24,6 +24,8 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
+	*this = other;
+	
 	std::cout << "The copy constructor was called for ScavTrap : " << this->_name << std::endl;
 	
 	return ;

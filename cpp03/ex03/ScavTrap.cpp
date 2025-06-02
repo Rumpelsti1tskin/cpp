@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap()
+ScavTrap::ScavTrap(void)
 {
 	std::cout << "The default constructor for ScavTrap was called!" << std::endl;
 
@@ -11,9 +11,9 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 	return ;
 }
 
-ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string &name)
 {
-	std::cout << "The defauld constructor for ScavTrap " << name << " was called!" << std::endl;
+	std::cout << "The default constructor for ScavTrap " << name << " was called!" << std::endl;
 
 	this->_hit_points = 100;
 	this->_energy_points = 50;
