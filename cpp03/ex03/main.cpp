@@ -83,6 +83,7 @@ int	main(void)
 
 	diamond_trap_2.attack("somebody");
 	diamond_trap_2.whoAmI();
+	
 	}
 	return (0);
 }
