@@ -5,14 +5,16 @@ INC = Animal.hpp \
 		Dog.hpp \
 		Cat.hpp \
 		WrongCat.hpp \
-		WrongAnimal.hpp
+		WrongAnimal.hpp \
+		Brain.hpp
 
 SRC = main.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

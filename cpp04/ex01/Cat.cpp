@@ -4,12 +4,16 @@ Cat::Cat() : Animal("Cat")
 {
 	std::cout << "A Cat has been created" << std::endl;
 	
+	this->brain = new Brain();
+
 	return ;
 }
 
-Cat::~Cat()
+Cat::~Cat() 
 {
 	std::cout << "You just killed the Cat " << this->_type << "! How dare you?" << std::endl;
+
+	delete this->brain;
 
 	return ;
 }
@@ -28,6 +32,8 @@ Cat	&Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		this->_type = other._type;
+		for (int i = 0; i < IDEA_NUM; ++i)
+			this->brain[i] = other.brain[i];
 	}
 
 	std::cout << "The copy asignment called for " << this->_type << std::endl;
